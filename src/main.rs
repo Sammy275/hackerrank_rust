@@ -118,18 +118,28 @@ use std::io;
 // }
 
 //. Sum of n Positive Integers  
+// fn main() {
+//     // Input Number
+//     let mut number = String::new();
+//     io::stdin().read_line(&mut number)
+//         .expect("Enter something");
+//     let number: i32 = number.trim().parse().unwrap();
+
+//     // Total
+//     let mut total: i32 = 0;
+//     for i in 1..=number {
+//         total = total + i;
+//     }
+
+//     println!("{}", total);
+// }
+
+// Digits Sum of a Number  
 fn main() {
-    // Input Number
-    let mut number = String::new();
-    io::stdin().read_line(&mut number)
-        .expect("Enter something");
-    let number: i32 = number.trim().parse().unwrap();
+    // Take input of a digit
+    let mut digit = String::new();
+    io::stdin().read_line(&mut digit).unwrap();
+    let digit: String = digit.trim().parse().unwrap();
 
-    // Total
-    let mut total: i32 = 0;
-    for i in 1..=number {
-        total = total + i;
-    }
-
-    println!("{}", total);
+    println!("{}", digit.chars().map(|num| num.to_digit(10).unwrap()).sum::<u32>());
 }
