@@ -38,20 +38,36 @@ use std::io;
 // }
 
 // Divisibility Check of two numbers 
+// fn main() {
+//     // Take first input
+//     let mut inp1 = String::new();
+//     io::stdin().read_line(&mut inp1)
+//         .expect("Error");
+//     let inp1: i32 = inp1.trim().parse().unwrap();
+
+//     // Take second input
+//     let mut inp2 = String::new();
+//     io::stdin().read_line(&mut inp2)
+//         .expect("Error");
+//     let inp2: i32 = inp2.trim().parse().unwrap();
+
+//     // Logic
+//     if (inp1 % inp2) == 0 { println!("Number {} is completely divisible by {}", inp1, inp2); }
+//     else { println!("Number {} is not completely divisible by {}", inp1, inp2); }
+// }
+
+// Calculate Volume of a sphere 
 fn main() {
-    // Take first input
-    let mut inp1 = String::new();
-    io::stdin().read_line(&mut inp1)
-        .expect("Error");
-    let inp1: i32 = inp1.trim().parse().unwrap();
+    // Defining Pi
+    const PI: f32 = 22.0/7.0;
 
-    // Take second input
-    let mut inp2 = String::new();
-    io::stdin().read_line(&mut inp2)
-        .expect("Error");
-    let inp2: i32 = inp2.trim().parse().unwrap();
+    // Taking input from user
+    let mut radius = String::new();
+    io::stdin().read_line(&mut radius)
+        .expect("Something went wrong");
+    let radius: f32 = radius.trim().parse().unwrap();
 
-    // Logic
-    if (inp1 % inp2) == 0 { println!("Number {} is completely divisible by {}", inp1, inp2); }
-    else { println!("Number {} is not completely divisible by {}", inp1, inp2); }
+    // Calculating volume
+    let volume: f32 = (4.0/3.0) * PI * (radius * radius * radius);
+    println!("Volume of the Sphere with Radius {} is {}", radius, volume);
 }
