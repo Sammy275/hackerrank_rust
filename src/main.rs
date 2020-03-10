@@ -73,20 +73,33 @@ use std::io;
 // }
 
 // Copy string n times 
+// fn main() {
+//     // User input of String
+//     let mut string = String::new();
+//     io::stdin().read_line(&mut string).unwrap();
+//     let string: String = string.trim().parse().unwrap();
+
+//     // Inputting duplication Number
+//     let mut copy = String::new();
+//     io::stdin().read_line(&mut copy).unwrap();
+//     let copy: i32 = copy.trim().parse().unwrap();
+//     if copy < 0 { panic!("Enter a number greater than 0!!!"); }
+
+//     //  printing the string
+//     for _i in 0..copy {
+//         print!("{}", string);
+//     }
+// }
+
+// Check if number is Even or Odd 
 fn main() {
-    // User input of String
-    let mut string = String::new();
-    io::stdin().read_line(&mut string).unwrap();
-    let string: String = string.trim().parse().unwrap();
+    // Input Number
+    let mut number = String::new();
+    io::stdin().read_line(&mut number)
+        .expect("Enter something");
+    let number: f32 = number.trim().parse().unwrap();
 
-    // Inputting duplication Number
-    let mut copy = String::new();
-    io::stdin().read_line(&mut copy).unwrap();
-    let copy: i32 = copy.trim().parse().unwrap();
-    if copy < 0 { panic!("Enter a number greater than 0!!!"); }
-
-    //  printing the string
-    for _i in 0..copy {
-        print!("{}", string);
-    }
+    // Checking if number is even or odd
+    if (number % 2.0) == 0.0 { println!("{} is Even", number); }
+    else { println!("{} is Odd", number); }
 }
