@@ -135,11 +135,20 @@ use std::io;
 // }
 
 // Digits Sum of a Number  
-fn main() {
-    // Take input of a digit
-    let mut digit = String::new();
-    io::stdin().read_line(&mut digit).unwrap();
-    let digit: String = digit.trim().parse().unwrap();
+// fn main() {
+//     // Take input of a digit
+//     let mut digit = String::new();
+//     io::stdin().read_line(&mut digit).unwrap();
+//     let digit: String = digit.trim().parse().unwrap();
 
-    println!("{}", digit.chars().map(|num| num.to_digit(10).unwrap()).sum::<u32>());
+//     println!("{}", digit.chars().map(|num| num.to_digit(10).unwrap()).sum::<u32>());
+// }
+
+// Decimal to Binary Converter
+fn main() {
+    let mut num = String::new();
+    io::stdin().read_line(&mut num).unwrap();
+    let num: i32 = num.trim().parse().unwrap();
+
+    println!("Binary representation of {} is {:b}", num, num);
 }
