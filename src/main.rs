@@ -57,17 +57,36 @@ use std::io;
 // }
 
 // Calculate Volume of a sphere 
+// fn main() {
+//     // Defining Pi
+//     const PI: f32 = 22.0/7.0;
+
+//     // Taking input from user
+//     let mut radius = String::new();
+//     io::stdin().read_line(&mut radius)
+//         .expect("Something went wrong");
+//     let radius: f32 = radius.trim().parse().unwrap();
+
+//     // Calculating volume
+//     let volume: f32 = (4.0/3.0) * PI * (radius * radius * radius);
+//     println!("Volume of the Sphere with Radius {} is {}", radius, volume);
+// }
+
+// Copy string n times 
 fn main() {
-    // Defining Pi
-    const PI: f32 = 22.0/7.0;
+    // User input of String
+    let mut string = String::new();
+    io::stdin().read_line(&mut string).unwrap();
+    let string: String = string.trim().parse().unwrap();
 
-    // Taking input from user
-    let mut radius = String::new();
-    io::stdin().read_line(&mut radius)
-        .expect("Something went wrong");
-    let radius: f32 = radius.trim().parse().unwrap();
+    // Inputting duplication Number
+    let mut copy = String::new();
+    io::stdin().read_line(&mut copy).unwrap();
+    let copy: i32 = copy.trim().parse().unwrap();
+    if copy < 0 { panic!("Enter a number greater than 0!!!"); }
 
-    // Calculating volume
-    let volume: f32 = (4.0/3.0) * PI * (radius * radius * radius);
-    println!("Volume of the Sphere with Radius {} is {}", radius, volume);
+    //  printing the string
+    for _i in 0..copy {
+        print!("{}", string);
+    }
 }
