@@ -92,14 +92,27 @@ use std::io;
 // }
 
 // Check if number is Even or Odd 
-fn main() {
-    // Input Number
-    let mut number = String::new();
-    io::stdin().read_line(&mut number)
-        .expect("Enter something");
-    let number: f32 = number.trim().parse().unwrap();
+// fn main() {
+//     // Input Number
+//     let mut number = String::new();
+//     io::stdin().read_line(&mut number)
+//         .expect("Enter something");
+//     let number: f32 = number.trim().parse().unwrap();
 
-    // Checking if number is even or odd
-    if (number % 2.0) == 0.0 { println!("{} is Even", number); }
-    else { println!("{} is Odd", number); }
+//     // Checking if number is even or odd
+//     if (number % 2.0) == 0.0 { println!("{} is Even", number); }
+//     else { println!("{} is Odd", number); }
+// }
+
+// Vowel Tester  
+fn main() {
+    // Input character
+    let mut character = String::new();
+    io::stdin().read_line(&mut character).unwrap();
+    let character: char = character.trim().to_lowercase().parse().unwrap();
+
+    match character {
+        'a'|'e'|'i'|'o'|'u' => println!("{} is a vowel", character),
+        _ => println!("{} is not a vowel", character),
+    }
 }
