@@ -105,14 +105,31 @@ use std::io;
 // }
 
 // Vowel Tester  
-fn main() {
-    // Input character
-    let mut character = String::new();
-    io::stdin().read_line(&mut character).unwrap();
-    let character: char = character.trim().to_lowercase().parse().unwrap();
+// fn main() {
+//     // Input character
+//     let mut character = String::new();
+//     io::stdin().read_line(&mut character).unwrap();
+//     let character: char = character.trim().to_lowercase().parse().unwrap();
 
-    match character {
-        'a'|'e'|'i'|'o'|'u' => println!("{} is a vowel", character),
-        _ => println!("{} is not a vowel", character),
+//     match character {
+//         'a'|'e'|'i'|'o'|'u' => println!("{} is a vowel", character),
+//         _ => println!("{} is not a vowel", character),
+//     }
+// }
+
+//. Sum of n Positive Integers  
+fn main() {
+    // Input Number
+    let mut number = String::new();
+    io::stdin().read_line(&mut number)
+        .expect("Enter something");
+    let number: i32 = number.trim().parse().unwrap();
+
+    // Total
+    let mut total: i32 = 0;
+    for i in 1..=number {
+        total = total + i;
     }
+
+    println!("{}", total);
 }
