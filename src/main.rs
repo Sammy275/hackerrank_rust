@@ -145,10 +145,40 @@ use std::io;
 // }
 
 // Decimal to Binary Converter
-fn main() {
-    let mut num = String::new();
-    io::stdin().read_line(&mut num).unwrap();
-    let num: i32 = num.trim().parse().unwrap();
+// fn main() {
+//     let mut num = String::new();
+//     io::stdin().read_line(&mut num).unwrap();
+//     let num: i32 = num.trim().parse().unwrap();
 
-    println!("Binary representation of {} is {:b}", num, num);
-}
+//     println!("Binary representation of {} is {:b}", num, num);
+// }
+
+// Vowel and Consonant counter
+// fn main() {
+//     let mut string = String::new();
+//     io::stdin().read_line(&mut string).unwrap();
+//     let string: String = string.trim().parse().unwrap();
+
+//     let mut vowel_arr = ['a', 'e', 'i', 'o', 'u'];
+   
+//     // Defining the variables to hold end results
+//     let mut vowel = 0;
+//     let mut consonant = 0;
+
+//     for i in string.chars() {
+//         for j in vowel_arr.iter() {
+//             if i == *j {
+//                 vowel += 1;
+//             }
+//             else {
+//                 if i == ' '{
+//                     continue;
+//                 }
+//                 else {
+//                     consonant = (consonant + 1) % 4;
+//                 }
+//             }
+//         }
+//     }
+//     println!("Vowels: {}\nConcsonant: {}", vowel, consonant);
+// }
